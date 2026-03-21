@@ -189,8 +189,7 @@ J’ai aussi découvert qu’il faut bien faire attention aux versions de Node.j
 Lien du dépôt GitHub
 
 Le code est disponible ici :
-https://github.com/AssoumouJames/blog-api
-(remplace par ton vrai lien si besoin)
+https://github.com/anderson-keny/document-api-inf222.git
 
 
 Ce qu’il reste à améliorer (si j’avais plus de temps)
