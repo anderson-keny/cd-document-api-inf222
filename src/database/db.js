@@ -1,0 +1,39 @@
+const sqlite3 = require('sqlite3').verbose();
+const path = require('path');
+
+// Chemin de la base de données
+const dbPath = path.join(__dirname, 'blog.db');
+
+// Création de la connexion
+const db = new sqlite3.Database(dbPath, (err) => {
+    if (err) {
+        console.error('Erreur de connexion:', err.message);
+    } else {
+        console.log(' Connecté à SQLite');
+    }
+});
+
+// Création de la table
+db.serialize(() => {
+    db.run(`
+        CREATE TABLE IF NOT EXISTS articles (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            titre TEXT NOT NULL,
+            contenu TEXT NOT NULL,
+            auteur TEXT NOT NULL,
+            date DATETIME DEFAULT CURRENT_TIMESTAMP,
+            categorie TEXT DEFAULT 'Non classé',
+            tags TEXT DEFAULT '[]'
+        )
+    `, (err) => {
+        if (err) {
+            console.error('Erreur création table:', err.message);
+        } else {
+            console.log(' Table "articles" prête');
+        }
+    });
+});
+
+module.exports = db;
+
+
