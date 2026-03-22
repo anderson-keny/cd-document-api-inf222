@@ -243,7 +243,7 @@ J’ai aussi découvert qu’il faut bien faire attention aux versions de Node.j
 Lien du dépôt GitHub
 
 Le code est disponible ici :
-https://github.com/anderson-keny/document-api-inf222.git
+https://github.com/Anderson-keny/cd-document-api-inf222
 
 
 Ce qu’il reste à améliorer (si j’avais plus de temps)
