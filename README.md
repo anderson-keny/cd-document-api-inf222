@@ -163,7 +163,61 @@ Supprimer un article
 ```bash
 curl -X DELETE http://localhost:3000/api/articles/1
 ```
+ Test avec Postman
 
+POST - Créer un article
+- **URL** : `http://localhost:3000/api/articles`
+- **Méthode** : POST
+- **Body** (raw JSON) :
+```json
+{
+  "titre": "Mon premier article",
+  "contenu": "Contenu de mon premier article",
+  "auteur": "Anderson Keny",
+  "categorie": "Technologie",
+  "tags": ["nodejs", "express", "api"]
+}
+```
+
+GET - Tous les articles
+
+· URL : http://localhost:3000/api/articles
+· Méthode : GET
+
+GET - Un article par ID
+
+· URL : http://localhost:3000/api/articles/1
+· Méthode : GET
+
+PUT - Modifier un article
+
+· URL : http://localhost:3000/api/articles/1
+· Méthode : PUT
+· Body (raw JSON) :
+
+```json
+{
+  "titre": "Titre modifié",
+  "contenu": "Nouveau contenu",
+  "categorie": "Programmation",
+  "tags": ["nodejs", "update"]
+}
+```
+
+DELETE - Supprimer un article
+
+· URL : http://localhost:3000/api/articles/1
+· Méthode : DELETE
+
+GET - Rechercher
+
+· URL : http://localhost:3000/api/articles/search?query=premier
+· Méthode : GET
+
+GET - Filtrer par catégorie
+
+· URL : http://localhost:3000/api/articles?categorie=Technologie
+· Méthode : GET
 Codes HTTP utilisés
 
 J’ai fait attention à bien retourner les bons codes :
